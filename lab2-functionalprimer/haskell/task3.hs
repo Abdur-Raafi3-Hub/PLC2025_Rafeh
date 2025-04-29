@@ -5,3 +5,19 @@ main = do
     input <- getLine 
     let x = (read input :: Int)
     putStrLn( show (sgn (x)) )
+
+    putStrLn "we#ll do another"
+    n <- getLine
+    putStrLn (show( sgnGuard(read n::Int)))
+
+
+--Writing using guards
+
+-- Declaring type signature for functions explicitly not 100% necessary
+sgnGuard x | x < 0 = -1
+           | x == 0 = 0
+           | otherwise = 1
+
+
+            
+            
